@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            height: 100vh;
+            overflow: hidden;
+
+        }
+
+        img {
+            position: absolute;
+            /* / */
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+        }
+    </style>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script src="../jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(() => {
+
+            // $("img").animate({})
+            $(document).keydown(function (evt) {
+                console.log(evt.keyCode)
+                if (evt.keyCode == 37) {
+                    $("img").animate(
+                        { left: '-=50px' }, "fast"
+                    )
+
+
+
+                    $("img").animate(
+                        { width: '-=10px' }, "slow"
+                    )
+                }
+                if (evt.keyCode == 38) {
+                    $("img").animate(
+                        { top: '-=50px' }, "fast"
+                    )
+                }
+                if (evt.keyCode == 39) {
+                    $("img").animate(
+                        { left: '+=50px' }, "fast"
+                    )
+                    $("img").animate(
+                        { width: '+=10px' }, "slow"
+                    )
+                }
+                if (evt.keyCode == 40) {
+                    $("img").animate(
+                        { top: '+=50px' }, "fast"
+                    )
+
+                    // $("img").animate(
+                    //     { transform: 'translate(295 115)' }, "fast"
+                    // )
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <img src="ball.svg" alt="" srcset="" width="100px">
+</body>
+
+</html>

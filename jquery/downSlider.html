@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .pannel {
+            /* display: none; */
+            /* display: ; */
+            height: 50vh;
+            width: 100vw;
+            background-color: hsl(223, 31%, 20%);
+            /* background-image: url(''); */
+            /* background-repeat: no-repeat;
+            background-size: cover; */
+            /* background-position:; */
+        }
+
+        button {
+            border: none;
+            width: 8rem;
+            height: 3rem;
+            border: 1px solid;
+            font-size: x-large
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: rgb(80, 70, 70);
+            color: white;
+        }
+    </style>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script src="../jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("button").click(function () {
+                // $("#pannel").animate({ display: 'contents', height: '50vh', width: '100vw', 'background-color': 'hsl(223, 31%, 20%)' }, "slow")
+
+                $("#pannel").slideToggle("slow");
+                var s = $(this).html()
+                console.log(s)
+                if (s == "&#x21E7;") {
+
+                    $(this).html("&#x21E9;")
+
+                } else {
+                    $(this).html("&#x21E7;")
+                }
+
+
+                // $(this).html("&#x21E7;")
+                // $(this).to
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="pannel" id="pannel" style="display: none;"></div>
+    <!-- &#x21E9; &#x21E7;-->
+    <button>&#x21E9;</button>
+</body>
+
+</html>

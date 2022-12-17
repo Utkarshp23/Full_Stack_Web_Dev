@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../HTML_Files/stylesheets/centre.css">
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script src="../jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("button").click(function () {
+                // console.log($(this));   
+                $(this).parent().next().slideToggle();
+            })
+
+        })
+    </script>
+    <style>
+        .subcontain {
+            display: flex;
+            justify-content: space-between;
+            gap: 100px;
+            width: 300px;
+
+        }
+
+        .subcontain_2 {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <div class="subcontain">
+            <h4>Head1</h4>
+            <button id="btn">k</button>
+        </div>
+        <div class="subcontain_2" style="display: none;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quia porro molestias enim, rerum fugit harum
+            incidunt odio perspiciatis ipsam neque cum! Doloribus, eligendi maxime impedit ullam sint deserunt in.
+        </div>
+        <div class="subcontain">
+            <h4>Head1</h4>
+            <button id="btn">k</button>
+        </div>
+        <div class="subcontain_2" style="display: none;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quia porro molestias enim, rerum fugit harum
+            incidunt odio perspiciatis ipsam neque cum! Doloribus, eligendi maxime impedit ullam sint deserunt in.
+        </div>
+        <div class="subcontain">
+            <h4>Head1</h4>
+            <button id="btn">k</button>
+        </div>
+        <div class="subcontain_2" style="display: none;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quia porro molestias enim, rerum fugit harum
+            incidunt odio perspiciatis ipsam neque cum! Doloribus, eligendi maxime impedit ullam sint deserunt in.
+        </div>
+        <div class="subcontain">
+            <h4>Head1</h4>
+            <button id="btn">k</button>
+        </div>
+        <div class="subcontain_2" style="display: none;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quia porro molestias enim, rerum fugit harum
+            incidunt odio perspiciatis ipsam neque cum! Doloribus, eligendi maxime impedit ullam sint deserunt in.
+        </div>
+    </div>
+</body>
+
+</html>

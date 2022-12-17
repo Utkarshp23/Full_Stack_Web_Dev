@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Using physical file -->
+    <!-- <script src="../jquery-3.6.0.min.js"></script>
+    <script src="../jquery-ui.min.js"></script> -->
+
+    <!-- Using CDN -->
+    <link rel="stylesheet" href="../HTML_Files/stylesheets/centre.css">
+    <style>
+        body {
+            /* flex-direction: column; */
+            gap: 5rem;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 3rem;
+        }
+
+        img:hover {
+            cursor: pointer;
+        }
+
+        .mobileBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .mobileBox:hover {
+            cursor: pointer;
+            color: white;
+            background-color: black;
+            border-radius: 20px;
+
+        }
+
+        #show {
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            border-radius: 20px;
+            padding: 20px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            // ###First--->
+            // alert("Hello")
+            // console.log("Hello from jquery")
+
+            // ###Second 1st--->
+            // $("#btn1").click(() => {
+            //     $("#image").show();
+            // })
+            // $("#btn2").click(() => {
+            //     $("#image").hide()
+            // })
+            // $("#btn3").click(() => {
+            //     $("#image").toggle()
+            // })
+
+            // ##Second -->3rd
+            // $("img").mousedown(function () {
+
+            //     // var att = $(this).attr('id')
+            //     // console.log(att)
+            //     $(this).fadeOut();
+            // })
+            // $("img").mouseup(function () {
+
+            //     // var att = $(this).attr('id')
+            //     // console.log(att)
+            //     $(this).fadeIn();
+            // }) 
+
+            $(".mobileBox").click(function () {
+
+
+                var cur = $(this).find(".desc");
+                // $("p").slideDown("slow")
+                // cur.slideToggle();
+                // console.log(cur)
+                $("#show").html(cur.html())
+                $("#show").slideToggle()
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+
+    <!-- ####Second 1st -->
+    <!-- <div>
+        <img src="../DOM/images/browser.png" alt="" id="image" style="display: none;">
+    </div>
+
+    <div>
+        <button id="btn1">show </button>
+        <button id="btn2">hide</button>
+        <button id="btn3">toggle</button>
+    </div> -->
+
+    <!-- ####Second 1st -->
+    <!-- <div class="container">
+        <img src="../DOM/images/browser.png" alt="" srcset="" id="img1">
+        <img src="../DOM/images/browser.png" alt="" srcset="">
+        <img src="../DOM/images/browser.png" alt="" srcset="">
+        <img src="../DOM/images/browser.png" alt="" srcset="">
+        <img src="../DOM/images/browser.png" alt="" srcset="">
+        <img src="../DOM/images/browser.png" alt="" srcset="">
+        <img src="../DOM/images/browser.png" alt="" srcset="">
+        <img src="../DOM/images/browser.png" alt="" srcset="">
+        <img src="../DOM/images/browser.png" alt="" srcset="">
+    </div> -->
+
+    <div class="container">
+        <div class="mobileBox">
+            <h5>iPhone1</h5>
+            <div class="desc" style="display: none;">
+                Hello
+            </div>
+        </div>
+        <div class="mobileBox">
+            <h5>iPhone2</h5>
+            <div class="desc" style="display:none">
+                Hello
+            </div>
+        </div>
+        <div class="mobileBox">
+            <h5>iPhone3</h5>
+            <div class="desc" style="display:none">
+                Hello
+            </div>
+        </div>
+        <div class="mobileBox">
+            <h5>iPhone4</h5>
+            <div class="desc" style="display:none">
+                Hello
+            </div>
+        </div>
+        <div class="mobileBox">
+            <h5>iPhone5</h5>
+            <div class="desc" style="display:none">
+                Hello
+            </div>
+        </div>
+        <div class="mobileBox">
+            <h5>iPhone6</h5>
+            <div class="desc" style="display:none">
+                Hello
+            </div>
+        </div>
+        <div class="mobileBox">
+            <h5>iPhone7</h5>
+            <div class="desc" style="display:none">
+                Hello
+            </div>
+        </div>
+        <div class="mobileBox">
+            <h5>iPhone8</h5>
+            <div class="desc" style="display:none">
+                Hello
+            </div>
+        </div>
+        <div class="mobileBox">
+            <h5>iPhone9</h5>
+            <div class="desc" style="display:none">
+                Bye
+            </div>
+        </div>
+    </div>
+    <div id="show" style="display: none;">
+
+    </div>
+</body>
+
+</html>
