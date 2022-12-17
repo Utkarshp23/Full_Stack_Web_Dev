@@ -1,0 +1,74 @@
+ @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400&display=swap'); 
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Kumbh Sans','Lexend Deca', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+
+}
+
+button{
+    border-style: none;
+    cursor: pointer;
+    font-family: inherit;
+    width: 200px;
+    height: 50px;
+    border: 1px solid;
+    padding: 9px;
+    
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+input {
+    /* text-decoration: underline; */
+    border: none;
+    padding: 7px;
+    /* width: 20; */
+    /* line-height: ; */
+    width: 200px;
+    /* height: 40px; */
+    border: .1rem solid grey;
+    
+}
+
+input:focus {
+    outline: none;
+}
+
+.table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.row div{
+    border: 1px solid;
+    padding: 9px;
+    margin: 1px;
+    height: 3rem;
+    width: 7rem;
+    text-align: center;
+}

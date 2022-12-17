@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="../../HTML_Files/stylesheets/centre.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .hrs,
+        .min,
+        .sec {
+            width: 8rem;
+            height: 6rem;
+            border: 1px solid;
+            margin: .5rem;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: .9rem;
+        }
+
+        span {
+            font-size: 50px;
+            margin: .4rem;
+        }
+
+        .timer,
+        .btns {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            border-style: none;
+            cursor: pointer;
+            font-family: inherit;
+            width: 100px;
+            height: 50px;
+            border: 1px solid;
+            padding: 9px;
+            margin: .9rem;
+            border-radius: 2rem;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="timer" id="timer">
+        <div class="hrs" id="hrs"></div>
+        <span>&#58;</span>
+        <div class="min" id="min"></div>
+        <span>&#58;</span>
+        <div class="sec" id="sec"></div>
+    </div>
+    <div class="btns" id="btns">
+        <button onclick="start()">start</button>
+        <button onclick="pause()">pause</button>
+        <button onclick="reset()">reset</button>
+    </div>
+
+
+    <script>
+        var hrsInt = 0
+        var minInt = 0
+        var secInt = 0
+        var hrsString = "" + hrsInt
+        var minString = "" + minInt
+        var secString = "" + secInt
+        var hrs = document.getElementById("hrs")
+        var min = document.getElementById("min")
+        var sec = document.getElementById("sec")
+        hrs.innerHTML = "0" + hrsString
+        min.innerHTML = "0" + minString
+        sec.innerHTML = "0" + secString
+
+        function timer() {
+            secInt++;
+            if (secInt == 60) {
+                secInt = 0;
+                minInt++;
+            }
+            if (minInt == 60) {
+                minInt = 0;
+                hrsInt++;
+            }
+
+            hrsString = "" + hrsInt
+            minString = "" + minInt
+            secString = "" + secInt
+
+            if (hrsInt <= 9) {
+                hrsString = "0" + hrsInt
+            }
+            if (minInt <= 9) {
+                minString = "0" + minInt
+            }
+            if (secInt <= 9) {
+                secString = "0" + secInt
+            }
+
+            // console.log(secInt + " " + minInt + " " + hrsInt)
+            hrs.innerHTML = hrsString
+            min.innerHTML = minString
+            sec.innerHTML = secString
+
+            flag = setTimeout(timer, 1000)
+        }
+
+
+
+        function start() {
+            timer()
+        }
+
+        function pause() {
+            clearTimeout(flag)
+        }
+
+        function reset() {
+            hrsInt = 0;
+            minInt = 0;
+            secInt = 0;
+            hrsString = "0" + hrsInt
+            minString = "0" + minInt
+            secString = "0" + secInt
+            hrs.innerHTML = hrsString
+            min.innerHTML = minString
+            sec.innerHTML = secString
+        }
+
+    </script>
+</body>
+
+</html>

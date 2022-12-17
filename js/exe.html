@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var arr=[12,18,27,48,65]
+
+        var str=""
+        str="<ul>"
+        arr.map((v,i)=>{
+            str+="<li>"
+            for(i=1;i<=v/2;++i)
+            {
+                if(v%i==0)
+                   {
+                     str+=(i+",")
+                    
+                   }
+            }
+            str+="</li>"
+
+        })
+        str+="</ul>"
+
+        document.write(str)
+    </script>
+</body>
+</html>

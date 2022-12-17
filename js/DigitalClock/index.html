@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="../../HTML_Files/stylesheets/centre.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .hrs,
+        .min,
+        .sec {
+            width: 8rem;
+            height: 6rem;
+            border: 1px solid;
+            margin: .5rem;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span {
+            font-size: 50px;
+            margin: .4rem;
+        }
+    </style>
+</head>
+
+<body onload="showTime()">
+    <div class="hrs" id="hrs"></div>
+    <span>&#58;</span>
+    <div class="min" id="min"></div>
+    <span>&#58;</span>
+    <div class="sec" id="sec"></div>
+
+    <script>
+
+
+        function showTime() {
+            date = new Date()
+            hrs = document.getElementById("hrs")
+            min = document.getElementById("min")
+            sec = document.getElementById("sec")
+            console.log(date.getHours())
+            hrsInt = date.getHours()
+            minInt = date.getMinutes()
+            secInt = date.getSeconds()
+            var hrsString = "" + hrsInt
+            var minString = "" + minInt
+            var secString = "" + secInt
+            if (hrsInt <= 9) {
+                hrsString = "0" + hrsInt
+            }
+            if (minInt <= 9) {
+                minString = "0" + minInt
+            }
+            if (secInt <= 9) {
+                secString = "0" + secInt
+            }
+
+            hrs.innerHTML = hrsString
+            min.innerHTML = minString
+            sec.innerHTML = secString
+
+            setTimeout(showTime, 1000)
+        }
+
+    </script>
+</body>
+
+</html>

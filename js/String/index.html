@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="date" name="date" id="date">
+        <button type="button" onclick="calc()">calc</button>
+    </form>
+
+    <script>
+        str = "utkarsh pawar"
+        // console.log(str)
+        // console.log(str.length)
+        // console.log(str.charAt(0))
+        // console.log(str.charCodeAt(0))
+        // console.log(str.toUpperCase())
+        // console.log(str.toLowerCase())
+        // console.log(str.indexOf('rsh'))
+        // console.log(str.slice(-str.length-1,-1))
+        // console.log(str.substring(0,7))
+        // console.log(str.substr(1,4))
+        // console.log(str.split(""))
+        // console.log(str)
+        // console.log(str.indexOf('a'))
+        // console.log(str.length-str.lastIndexOf('a'))
+
+        // Date
+        function calc() {
+            var d = new Date()
+            date = new Date(document.getElementById("date").value);
+            console.log(date.getFullYear())
+            console.log(d.getFullYear() - date.getFullYear())
+        }
+
+        // var d = new Date()
+        // console.log(d.getFullYear())
+    </script>
+</body>
+
+</html>
