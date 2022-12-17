@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../HTML_Files/stylesheets/centre.css">
+    <style>
+        /* #title {
+            text-shadow: 2px 2px black;
+        } */
+
+        button {
+            border-style: none;
+            cursor: pointer;
+            font-family: inherit;
+            width: 100px;
+            height: 50px;
+            border: 1px solid;
+            padding: 9px;
+            margin: 4px;
+            border-radius: 15px;
+
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        li {
+            list-style: none;
+
+        }
+
+        ul {
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            /* gap: 2rem; */
+            margin: 0;
+            padding: 0;
+        }
+
+        li div {
+            height: 100px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        li:hover {
+            cursor: pointer;
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Change shado on Over -->
+    <!-- <h2 id="title">Utkarsh</h2> -->
+
+
+    <!-- // ##Change color on clicking -->
+    <!-- <button onclick="change1()">Color1</button>
+    <button onclick="change2()">Color2</button>
+    <button onclick="change3()">Color3</button> -->
+
+    <ul>
+
+        <li onclick="displace(this)" ondblclick="withdraw(this)">
+            <div id="desktop">Desktop</div>
+        </li>
+        <li onclick="displace(this)" ondblclick="withdraw(this)">
+            <div id="computer">MyComputer</div>
+        </li>
+        <li onclick="displace(this)">
+            <div id="folder">Folder</div>
+        </li>
+        <li onclick="displace(this)">
+            <div id="browser">Browser</div>
+        </li>
+        <li onclick="displace(this)">
+            <div id="doc">World Document</div>
+        </li>
+
+    </ul>
+    <script src="script.js"></script>
+    <!-- <img src="./images/browser.png" alt="" srcset=""> -->
+
+</body>
+
+</html>

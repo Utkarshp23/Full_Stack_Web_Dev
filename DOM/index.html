@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../HTML_Files/stylesheets/centre.css">
+    <style>
+        body {
+            flex-direction: column;
+            overflow: scroll;
+        }
+
+        .dispContent {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #paraTitle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+
+        }
+
+        #paraContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 6;
+        }
+
+        #paraTitle div,
+        #paraContent div {
+            height: 40px;
+            padding: .3rem;
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pars" id="pars">
+        <div class="contain">
+            <h3>Para1</h3>
+            <p id="p1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis delectus facere beatae commodi aliquam
+                sint
+                voluptatem quis ipsum eum, harum mollitia itaque magnam!
+            </p>
+        </div>
+        <div class="contain">
+            <h3>Para2</h3>
+            <p id="p1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis delectus facere beatae commodi aliquam
+                sint
+                voluptatem quis ipsum eum, harum mollitia itaque magnam!
+            </p>
+        </div>
+        <div class="contain">
+            <h3>Para3</h3>
+            <p id="p1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis delectus facere beatae commodi aliquam
+                sint
+                voluptatem quis ipsum eum, harum mollitia itaque magnam!
+            </p>
+        </div>
+        <div class="contain">
+            <h3>Para4</h3>
+            <p id="p1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis delectus facere beatae commodi aliquam
+                sint
+                voluptatem quis ipsum eum, harum mollitia itaque magnam!
+            </p>
+        </div>
+        <div class="contain">
+            <h3>Para5</h3>
+            <p id="p1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis delectus facere beatae commodi aliquam
+                sint
+                voluptatem quis ipsum eum, harum mollitia itaque magnam!
+            </p>
+        </div>
+
+
+    </div>
+    <div class="btn" id="btn">
+        <button onclick="dispContent()">Show Content</button>
+    </div>
+    <div class="dispContent" id="show">
+        <div id="paraTitle"></div>
+        <div id="paraContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
